@@ -1,0 +1,6 @@
+# scratch and derived output -- never committed
+/发布/
+__pycache__/
+*.pyc
+/星球工坊/build/
+/星球工坊/tools/__pycache__/
