@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>星球工坊 · 配置生成器</title>
+<style>
+ body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:#15171c;color:#e8e6e3;margin:0;padding:18px}
+ h1{font-size:20px;margin:0 0 4px}
+ .hint{color:#9aa0a6;font-size:13px;margin-bottom:14px;line-height:1.7}
+ .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:start}
+ .card{background:#1d2026;border:1px solid #2c313a;border-radius:10px;padding:14px}
+ .block{border:1px solid #313846;border-radius:9px;padding:10px;margin:10px 0;background:#191c22}
+ .target{border:1px dashed #3a4250;border-radius:8px;padding:8px;margin:6px 0}
+ label{display:block;font-size:13px;color:#c9cdd3;margin:8px 0 4px}
+ select,input[type=text],textarea{background:#12141a;color:#e8e6e3;border:1px solid #333a45;
+   border-radius:6px;padding:7px;font-size:13px;box-sizing:border-box}
+ textarea{width:100%;height:420px;font-family:Consolas,monospace;white-space:pre}
+ select{max-width:100%}
+ button{background:#2d6cdf;color:#fff;border:0;border-radius:6px;padding:8px 13px;font-size:13px;
+   cursor:pointer;margin:6px 6px 0 0}
+ button.ghost{background:#333a45}
+ .tags{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;max-height:190px;overflow:auto;
+   border:1px solid #2c313a;border-radius:8px;padding:8px;margin:4px 0}
+ .tags label{display:flex;gap:6px;align-items:center;margin:0;font-size:12.5px;color:#dfe3e8}
+ .row{display:flex;gap:6px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+ .pill{font-size:11.5px;padding:1px 7px;border-radius:20px;background:#2a303a;color:#9fd3ff}
+ .warn{color:#ffb86b}.bad{color:#ff7b72}.ok{color:#7ee787}
+ small{color:#8b919a;display:block;line-height:1.5}
+</style></head><body>
+<h1>星球工坊 · 配置生成器</h1>
+<div class="hint">
+  <b>可加多个模板星球</b>（每个阵营一个最干净）：一个模板星球可以对应任意多个<b>目标星球</b>。<br>
+  目标星球必须确认是 <span class="pill">无人星球</span>（在图上但进不去 ⇒ <code>plan 125</code>）还是
+  <span class="pill">隐藏星球</span>（不在图上 ⇒ <code>plan 127 rows on</code>，会写 timer/state 把它调出来）。<br>
+  每颗星球<b>最多 {MAXTAGS} 个词条</b>；<b>词条与解锁是两层</b>——解锁后仍要单独给它写词条（生成器会自动写）。
+  模板的词条会作为它的目标的默认词条，也可以逐个目标单独改。
+</div>
+<div class="grid">
+  <div class="card">
+    <div id="live"></div>
+    <label>搜索星球（按名字或 id 过滤下面的下拉框，272 颗里找人名不再翻列表）</label>
+    <input type="text" id="filter" placeholder="例如 PARTION / 帕尔晨 / 215" oninput="setFilter(this.value)">
+    <label>模板星球 / 目标星球</label>
+    <div id="blocks"></div>
+    <button class="ghost" onclick="addBlock()">+ 添加模板星球</button>
+
+    <button onclick="generate()">生成 cfg</button>
+    <button class="ghost" onclick="downloadCfg()">下载 planetforge.cfg</button>
+    <button class="ghost" onclick="downloadSpec()">下载配方 JSON（可拖到 生成配置.bat）</button>
+    <button class="ghost" onclick="loadDefault()">载入默认模板</button>
+    <button class="ghost" onclick="copyCfg()">复制</button>
+    <label>导入现有 cfg（选中或拖入一份 planetforge.cfg：读回模板/目标/词条，界面表示不了的行原样保留）</label>
+    <input type="file" id="import" accept=".cfg,.txt" onchange="importCfg(this)">
+
+    <label>替换目标 cfg（改完直接覆盖插件读的那份）</label>
+    <button class="ghost" onclick="pickCfg()">选择目标 cfg 并记住它</button>
+    <button class="ghost" onclick="saveToPicked()">替换保存到它</button>
+    <button class="ghost" onclick="restorePicked()">还原上一份</button>
+    <small id="cfgstatus">最省事的两步：①点上面的"下载 planetforge.cfg" ②双击同文件夹的 <b>生成配置.bat</b>
+    ——它会自动用 Downloads 里刚下载的那份替换，并先把原文件<b>备份</b>。
+    若你的浏览器支持直接写文件（Chrome/Edge 打开本页时通常支持），也可以用上面"选择目标 cfg 并记住它"
+    （通常是 <code>%APPDATA%\Arrowhead\Helldivers2\planetforge.cfg</code>），之后一键替换 / 一键还原。</small>
+    <div id="report"></div>
+  </div>
+  <div class="card">
+    <label>生成的配置（会装到 %APPDATA%\\Arrowhead\\Helldivers2\\planetforge.cfg）</label>
+    <textarea id="out" spellcheck="false"></textarea>
+    <div class="hint" id="stats"></div>
+  </div>
+</div>
+<div class="card" id="mapcard" style="margin-top:16px">
+  <label>星图对照（社区截图：三大阵营区域与相对位置；<b>只作参考——不随战况更新、不可点选</b>）</label>
+  <div id="mapbox" style="overflow:auto;max-height:72vh;border:1px solid #2c313a;border-radius:8px;background:#0d0f13">
+    <img id="starmap" src="地图/星图.png" alt="社区星图（Galactic War 截图）"
+         style="width:100%;display:block;cursor:zoom-in" onclick="toggleZoom()">
+  </div>
+  <small>要精确找某颗星球请用上面的<b>搜索框</b>（输名字或 id 即可过滤）；这张图只是帮你判断"它大致在哪个区域"。
+  标注来源：<a href="https://helldivers.wiki.gg/wiki/Galactic_War" style="color:#9fd3ff">helldivers.wiki.gg / Galactic_War</a></small>
+</div>
+<script>
+const DATA = /*__DATA__*/;
+const planets = DATA.planets, tags = DATA.tags, factions = DATA.factions;
+const never = new Set(DATA.never), MAXTAGS = DATA.maxTags;
+const FACTION_OPTIONS = [[2, '终结族'], [3, '机器人'], [4, '光能者'], [1, '超级地球']];
+
+function newBlock(source, faction) {
+  return { source: String(source), faction: String(faction || 2), tags: [], targets: [] };
+}
+let state = { blocks: [newBlock(215, 2)], open: {} };
+let extras = [];      // lines the UI cannot express, kept verbatim so an import is lossless
+
+function planetLabel(id) {
+  const p = planets[id]; if (!p) return id + '（未知）';
+  const f = factions[p.faction] || ('阵营' + p.faction);
+  return id + ' · ' + p.name + ' [' + f + (p.available === 1 ? ', 可打' : ', 未开启') + ']';
+}
+function classOf(id) {
+  if (never.has(Number(id))) return 'forbidden';
+  const p = planets[id]; if (!p) return 'unknown';
+  return p.available === 1 ? 'active' : 'locked';
+}
+function classNote(id) {
+  const c = classOf(id);
+  if (c === 'forbidden') return '禁止使用（特殊槽位）';
+  if (c === 'active') return '当前就能打，不需要 unlock';
+  if (c === 'locked') return '未开启（适合解锁）';
+  return '未知星球';
+}
+function planetOptions(selected) {
+  const query = (state.filter || '').trim().toLowerCase();
+  let ids = Object.keys(planets);
+  if (query) {
+    ids = ids.filter(id => {
+      const p = planets[id] || {};
+      return String(id) === String(selected) || String(id).includes(query) ||
+        (p.name && p.name.toLowerCase().includes(query));
+    });
+    if (!ids.length) ids = [String(selected)];   // never drop the current choice
+  }
+  return ids.map(id => '<option value="' + id + '"' +
+    (String(id) === String(selected) ? ' selected' : '') + '>' + planetLabel(id) + '</option>').join('');
+}
+function setFilter(value) {
+  state.filter = value;
+  render();
+  const box = document.getElementById('filter');
+  if (box) { box.value = value; box.focus(); }
+}
+function tagBox(path, selected) {
+  return '<div class="tags">' + tags.map(t => '<label><input type="checkbox" value="' + t.id + '"' +
+    (selected.includes(t.id) ? ' checked' : '') + ' onchange="onTag(\'' + path + '\',' + t.id +
+    ',this.checked)"><span>' + t.id + ' · ' + t.name + '</span></label>').join('') + '</div>';
+}
+function owner(path) {
+  const m = path.match(/^b(\d+)(?:t(\d+))?$/);
+  if (!m) return null;
+  const block = state.blocks[Number(m[1])];
+  if (!block) return null;
+  return m[2] === undefined ? block : block.targets[Number(m[2])];
+}
+function onTag(path, id, on) {
+  const target = owner(path); if (!target) return;
+  const list = target.tags || [];
+  if (on) {
+    if (list.length >= MAXTAGS) { alert('每颗星球最多 ' + MAXTAGS + ' 个词条'); render(); return; }
+    target.tags = list.concat([id]);
+  } else {
+    target.tags = list.filter(x => x !== id);
+  }
+  render();
+}
+function toggleTags(path) { state.open[path] = !state.open[path]; render(); }
+function addBlock() { state.blocks.push(newBlock(215, 2)); render(); }
+function delBlock(i) { state.blocks.splice(i, 1); if (!state.blocks.length) state.blocks.push(newBlock(215, 2)); render(); }
+function setBlock(i, key, value) { state.blocks[i][key] = value; render(); }
+function addTarget(i) {
+  const used = state.blocks[i].targets.map(t => String(t.planet));
+  let pick = '';
+  for (const id of Object.keys(planets)) { if (classOf(id) === 'locked' && !used.includes(id)) { pick = id; break; } }
+  state.blocks[i].targets.push({ planet: pick, class: 'unoccupied', tags: (state.blocks[i].tags || []).slice() });
+  render();
+}
+function delTarget(i, j) { state.blocks[i].targets.splice(j, 1); render(); }
+function setTarget(i, j, key, value) { state.blocks[i].targets[j][key] = value; render(); }
+
+function render() {
+  document.getElementById('blocks').innerHTML = state.blocks.map((block, i) => {
+    const path = 'b' + i;
+    return '<div class="block">' +
+      '<div class="row"><b>模板星球 ' + (i + 1) + '</b>' +
+      '<select style="flex:1" onchange="setBlock(' + i + ',\'source\',this.value)">' + planetOptions(block.source) + '</select>' +
+      '<select style="flex:0 0 110px" onchange="setBlock(' + i + ',\'faction\',this.value)">' +
+      FACTION_OPTIONS.map(o => '<option value="' + o[0] + '"' + (String(block.faction) === String(o[0]) ? ' selected' : '') + '>' + o[1] + '</option>').join('') +
+      '</select><button class="ghost" onclick="delBlock(' + i + ')">删模板</button></div>' +
+      '<small>' + classNote(block.source) + ' — 它的任务行就是该阵营的模板，会被下面所有目标复制</small>' +
+      '<label>这个模板的词条（默认套给它的目标）</label>' + tagBox(path, block.tags || []) +
+      '<label>目标星球</label>' +
+      (block.targets.length ? block.targets.map((t, j) => targetRow(i, j, t)).join('') : '<small>（还没有目标星球）</small>') +
+      '<button class="ghost" onclick="addTarget(' + i + ')">+ 给这个模板加目标</button>' +
+      '</div>';
+  }).join('');
+}
+function targetRow(i, j, t) {
+  const path = 'b' + i + 't' + j;
+  return '<div class="target"><div class="row">' +
+    '<select style="flex:1" onchange="setTarget(' + i + ',' + j + ',\'planet\',this.value)">' + planetOptions(t.planet) + '</select>' +
+    '<select style="flex:0 0 120px" onchange="setTarget(' + i + ',' + j + ',\'class\',this.value)">' +
+    '<option value="unoccupied"' + (t.class === 'unoccupied' ? ' selected' : '') + '>无人星球</option>' +
+    '<option value="hidden"' + (t.class === 'hidden' ? ' selected' : '') + '>隐藏星球</option></select>' +
+    '<button class="ghost" onclick="toggleTags(\'' + path + '\')">词条 ' + ((t.tags || []).length) + '</button>' +
+    '<button class="ghost" onclick="delTarget(' + i + ',' + j + ')">删</button></div>' +
+    '<small class="' + (classOf(t.planet) === 'locked' ? 'ok' : 'warn') + '">' + classNote(t.planet) + '</small>' +
+    (state.open[path] ? tagBox(path, t.tags || []) : '') +
+    '</div>';
+}
+function renderLive() {
+  const box = document.getElementById('live');
+  const info = DATA.live, notes = DATA.liveNotes || [];
+  if (!info && !notes.length) { box.innerHTML = ''; return; }
+  const bits = [];
+  if (info) bits.push('星球表已并入 live 导出（' + (info.taken || '时间未知') + '，' +
+    info.planets + ' 颗 / ' + info.tags + ' 条 tag 哈希）');
+  for (const note of notes) bits.push('<span class="warn">' + note + '</span>');
+  box.innerHTML = '<div class="hint">' + bits.join('<br>') + '</div>';
+}
+function importCfg(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => { applyImported(String(reader.result)); input.value = ''; };
+  reader.readAsText(file, 'utf-8');
+}
+// --- replacing the config the addon actually reads -------------------------------------------
+// A page cannot find %APPDATA% by itself. Two ways out: the installer .bat next to this file (it
+// looks in Downloads for the file this page just downloaded), or the File System Access API when the
+// browser offers it -- the user points at the real cfg once and then this page can replace it and
+// put the original back.
+let cfgHandle = null, cfgOriginal = null, cfgName = '';
+function cfgStatus(html) {
+  const box = document.getElementById('cfgstatus');
+  if (box) box.innerHTML = html;
+}
+async function pickCfg() {
+  if (!window.showOpenFilePicker) {
+    cfgStatus('这个浏览器不支持直接写文件 ⇒ 用"下载 planetforge.cfg" + 双击 <b>生成配置.bat</b>'
+      + '（它会自动找到 Downloads 里那份，并先备份原配置）。');
+    return;
+  }
+  try {
+    const picked = await window.showOpenFilePicker({ multiple: false,
+      types: [{ description: 'PlanetForge config', accept: { 'text/plain': ['.cfg'] } }] });
+    cfgHandle = picked[0];
+    const file = await cfgHandle.getFile();
+    cfgOriginal = await file.text();
+    cfgName = file.name;
+    cfgStatus('已记住 <b>' + cfgName + '</b>（' + cfgOriginal.length
+      + ' 字节）。点"替换保存到它"写入，点"还原上一份"退回。');
+    applyImported(cfgOriginal, true);
+  } catch (error) {
+    if (error && error.name !== 'AbortError') cfgStatus('选择失败：' + error.message);
+  }
+}
+async function saveToPicked() {
+  if (!cfgHandle) { cfgStatus('先点"选择目标 cfg 并记住它"，或改用 下载 + 生成配置.bat。'); return; }
+  try {
+    const writable = await cfgHandle.createWritable();
+    const text = document.getElementById('out').value;
+    await writable.write(text);
+    await writable.close();
+    cfgStatus('已替换 <b>' + cfgName + '</b>（写入 ' + text.length
+      + ' 字节）。游戏内约 2 秒热重载；要退回点"还原上一份"。');
+  } catch (error) {
+    cfgStatus('写入失败：' + error.message + '（改用"下载 planetforge.cfg" + 生成配置.bat）');
+  }
+}
+async function restorePicked() {
+  if (!cfgHandle || cfgOriginal === null) { cfgStatus('还没有可还原的原文件。'); return; }
+  try {
+    const writable = await cfgHandle.createWritable();
+    await writable.write(cfgOriginal);
+    await writable.close();
+    cfgStatus('已把 <b>' + cfgName + '</b> 还原为选择时的内容。');
+  } catch (error) {
+    cfgStatus('还原失败：' + error.message);
+  }
+}
+function applyImported(text, quiet) {
+  const tagsOf = {}, unlocks = [], kept = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.split('#')[0].trim();
+    if (!line) continue;
+    const f = line.split(/\s+/);
+    if (f[0] === 'live') { kept.push(line); continue; }
+    if (f[0] === 'planet' && f.length >= 2) {
+      const id = parseInt(f[1], 10);
+      if (!Number.isFinite(id)) { kept.push(line); continue; }
+      let tags = [], filter = null, i = 2;
+      while (i < f.length) {
+        if (f[i] === 'tag' && i + 1 < f.length) {
+          tags = f[i + 1].split(',').map(x => parseInt(x, 10)).filter(Number.isFinite);
+          i += 2;
+        } else if (f[i] === 'filter' && i + 1 < f.length) {
+          filter = parseInt(f[i + 1], 10); i += 2;
+        } else { i += 1; }
+      }
+      tagsOf[id] = { tags: tags, filter: filter };
+      continue;
+    }
+    if (f[0] === 'unlock' && f.length >= 2) {
+      const id = parseInt(f[1], 10);
+      if (!Number.isFinite(id)) { kept.push(line); continue; }
+      const entry = { planet: id, faction: 2, source: null, hidden: false };
+      let i = 2;
+      while (i < f.length) {
+        if (f[i] === 'faction' && i + 1 < f.length) {
+          entry.faction = parseInt(f[i + 1], 10) || 2; i += 2;
+        } else if (f[i] === 'source' && i + 1 < f.length) {
+          const value = parseInt(f[i + 1], 10);
+          entry.source = Number.isFinite(value) ? value : null; i += 2;
+        } else if (f[i] === 'plan' && i + 1 < f.length) {
+          entry.hidden = f[i + 1] === '127'; i += 2;
+        } else { i += 1; }
+      }
+      unlocks.push(entry);
+      continue;
+    }
+    kept.push(line);
+  }
+  const blocks = [], seen = {};
+  for (const entry of unlocks) {
+    const key = String(entry.source) + '/' + entry.faction;
+    if (!seen[key]) {
+      const sourceTags = (tagsOf[entry.source] || {}).tags || [];
+      seen[key] = { source: entry.source === null ? '' : String(entry.source),
+                    faction: String(entry.faction), tags: sourceTags.slice(), targets: [] };
+      blocks.push(seen[key]);
+    }
+    const info = tagsOf[entry.planet] || {};
+    seen[key].targets.push({ planet: String(entry.planet),
+                             class: entry.hidden ? 'hidden' : 'unoccupied',
+                             tags: (info.tags || []).slice() });
+  }
+  if (!blocks.length) {
+    // a config with only planet lines (no unlock): show those as their own blocks so nothing is lost
+    for (const id of Object.keys(tagsOf)) {
+      blocks.push({ source: String(id), faction: String(tagsOf[id].filter || 2),
+                    tags: (tagsOf[id].tags || []).slice(), targets: [] });
+    }
+  }
+  extras = kept;
+  state = { blocks: blocks.length ? blocks : [newBlock(215, 2)], open: {}, filter: state.filter };
+  render(); generate();
+  if (!quiet) {
+    alert('已导入：' + blocks.length + ' 个模板、' + unlocks.length + ' 个目标'
+        + (kept.length ? '，另有 ' + kept.length + ' 行界面表示不了、已原样保留' : ''));
+  }
+}
+function loadDefault() {
+  const keepFilter = state.filter;
+  state = { blocks: [], open: {}, filter: keepFilter };
+  for (const tpl of DATA.default.templates) {
+    const block = newBlock(tpl.planet, tpl.faction);
+    block.tags = (tpl.tags || []).slice();
+    block.targets = (tpl.targets || []).map(t => ({
+      planet: String(t.planet), class: t.class || 'unoccupied',
+      tags: (t.tags || []).slice() }));
+    state.blocks.push(block);
+  }
+  render(); generate();
+}
+function currentSpec() {
+  return {
+    templates: state.blocks.map(block => ({
+      planet: Number(block.source), faction: Number(block.faction), tags: block.tags || [],
+      targets: block.targets.map(t => ({
+        planet: Number(t.planet), class: t.class, tags: t.tags || [] }))
+    }))
+  };
+}
+function generate() {
+  const out = [];
+  out.push('# 星球工坊配置（HTML 生成器，对应插件模板 v' + DATA.version + '）');
+  out.push('# 这个文件被插件视为"用户自己编辑过"，永远不会被插件覆盖。');
+  out.push('# 任务(unlock) 与 词条(planet) 是两层：解锁后要单独给该星球写 planet 行。');
+  const report = [];
+  let unlocks = 0, tagLines = 0, blocks = 0;
+  for (const block of state.blocks) {
+    blocks++;
+    out.push('');
+    out.push('# ===== 模板星球（来源）' + block.source + ' — ' + (planets[block.source] || {}).name +
+      '（' + (factions[block.faction] || block.faction) + '）：' + classNote(block.source));
+    if (classOf(block.source) === 'active') report.push('<span class="warn">模板 ' + block.source + ' 当前就能打，作为来源没问题（它就是一颗在打的星球）</span>');
+    if (classOf(block.source) === 'forbidden') report.push('<span class="bad">模板 ' + block.source + ' 是禁止槽位</span>');
+    if ((block.tags || []).length) {
+      out.push('planet ' + block.source + ' tag ' + block.tags.join(',') + ' filter ' + block.faction +
+        '    # 模板星球自己的词条');
+      tagLines++;
+    }
+    for (const t of block.targets) {
+      const c = classOf(t.planet);
+      if (c === 'forbidden') report.push('<span class="bad">目标 ' + t.planet + ' 是禁止槽位</span>');
+      if (c === 'active') report.push('<span class="warn">目标 ' + t.planet + ' 当前就能打，不需要 unlock</span>');
+      const hidden = t.class === 'hidden';
+      out.push('# 目标星球 ' + t.planet + ' — ' + (planets[t.planet] || {}).name + '（' + classNote(t.planet) + '）');
+      out.push('unlock ' + t.planet + ' faction ' + block.faction + ' source ' + block.source +
+        (hidden ? ' plan 127 rows on' : '') + (hidden ? '    # 隐藏星球' : '    # 无人星球'));
+      unlocks++;
+      if ((t.tags || []).length) {
+        out.push('planet ' + t.planet + ' tag ' + t.tags.join(',') + ' filter ' + block.faction +
+          '    # ' + (planets[t.planet] || {}).name + ' 的词条');
+        tagLines++;
+      } else {
+        out.push('# planet ' + t.planet + ' tag <索引> filter ' + block.faction +
+          '   （没选词条：这颗星球只有任务、没有特殊变种）');
+      }
+    }
+  }
+  if (extras.length) {
+    out.push('');
+    out.push('# ===== 以下是导入时无法在这个界面里表示的行，原样保留');
+    for (const line of extras) out.push(line);
+  }
+  document.getElementById('out').value = out.join('\n') + '\n';
+  document.getElementById('report').innerHTML = report.join('<br>');
+  document.getElementById('stats').textContent = blocks + ' 个模板、' + unlocks + ' 条 unlock、' +
+    tagLines + ' 条词条行（每颗最多 ' + MAXTAGS + ' 个词条）' +
+    (extras.length ? '；另有 ' + extras.length + ' 行原样保留' : '');
+}
+function copyCfg() { navigator.clipboard.writeText(document.getElementById('out').value); }
+function downloadCfg() {
+  const blob = new Blob([document.getElementById('out').value], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'planetforge.cfg'; a.click();
+}
+function downloadSpec() {
+  const spec = currentSpec();
+  if (extras.length) spec.extras = extras.slice();
+  const blob = new Blob([JSON.stringify(spec, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'planetforge_spec.json'; a.click();
+}
+let mapZoomed = false;
+function toggleZoom() {
+  const img = document.getElementById('starmap');
+  if (!img) return;
+  mapZoomed = !mapZoomed;
+  img.style.width = mapZoomed ? '230%' : '100%';
+  img.style.cursor = mapZoomed ? 'zoom-out' : 'zoom-in';
+}
+function initMap() {
+  const img = document.getElementById('starmap');
+  if (!img) return;
+  // the picture is optional: if it is missing the whole card disappears instead of showing a broken
+  // image icon (the generator must work from the HTML file alone)
+  img.onerror = () => {
+    const card = document.getElementById('mapcard');
+    if (card) card.style.display = 'none';
+  };
+}
+loadDefault();
+renderLive();
+initMap();
+</script></body></html>

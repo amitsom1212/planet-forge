@@ -1,0 +1,1920 @@
+{
+ "1": {
+  "name": "KLEN DAHTH II",
+  "faction": 1,
+  "available": 0,
+  "state": 122,
+  "timer": 1082479957
+ },
+ "2": {
+  "name": "PATHFINDER V",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "3": {
+  "name": "WIDOW'S HARBOR",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "4": {
+  "name": "NEW HAVEN",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "5": {
+  "name": "PILEN V",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "6": {
+  "name": "HYDROFALL PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "7": {
+  "name": "ZEA RUGOSIA",
+  "faction": 4,
+  "available": 1,
+  "state": 1,
+  "timer": 1096693988
+ },
+ "8": {
+  "name": "DARROWSPORT",
+  "faction": 1,
+  "available": 0,
+  "state": 19,
+  "timer": 1082479957
+ },
+ "9": {
+  "name": "FORNSKOGUR II",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "10": {
+  "name": "MIDASBURG",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "11": {
+  "name": "CERBERUS IIIc",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "12": {
+  "name": "PROSPERITY FALLS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "13": {
+  "name": "OKUL VI",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "14": {
+  "name": "MARTYR'S BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "15": {
+  "name": "FREEDOM PEAK",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "16": {
+  "name": "FORT UNION",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "17": {
+  "name": "KELVINOR",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "18": {
+  "name": "WRAITH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "19": {
+  "name": "IGLA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "20": {
+  "name": "NEW KIRUNA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "21": {
+  "name": "FORT JUSTICE",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "22": {
+  "name": "ZEGEMA PARADISE",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "23": {
+  "name": "PROVIDENCE",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "24": {
+  "name": "PRIMORDIA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "25": {
+  "name": "SULFURA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1068615452
+ },
+ "26": {
+  "name": "NUBLARIA I",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 965845684
+ },
+ "27": {
+  "name": "KRAKATWO",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1068615452
+ },
+ "28": {
+  "name": "VOLTERRA",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "29": {
+  "name": "CRUCIBLE",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "30": {
+  "name": "VEIL",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "31": {
+  "name": "MARRE IV",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "32": {
+  "name": "FORT SANCTUARY",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "33": {
+  "name": "SEYSHEL BEACH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1060226844
+ },
+ "34": {
+  "name": "HELLMIRE",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "35": {
+  "name": "EFFLUVIA",
+  "faction": 1,
+  "available": 0,
+  "state": 5,
+  "timer": 1060226844
+ },
+ "36": {
+  "name": "SOLGHAST",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "37": {
+  "name": "DILUVIA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "38": {
+  "name": "VIRIDIA PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "39": {
+  "name": "OBARI",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "40": {
+  "name": "MYRADESH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "41": {
+  "name": "ATRAMA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "42": {
+  "name": "EMERIA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "43": {
+  "name": "BARABOS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "44": {
+  "name": "FENMIRE",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1060226844
+ },
+ "45": {
+  "name": "MASTIA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "46": {
+  "name": "SHALLUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "47": {
+  "name": "KRAKABOS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "48": {
+  "name": "IRIDICA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "49": {
+  "name": "AZTERRA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1068615452
+ },
+ "50": {
+  "name": "AZUR SECUNDUS",
+  "faction": 2,
+  "available": 0,
+  "state": 4,
+  "timer": 1088305380
+ },
+ "51": {
+  "name": "IVIS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "52": {
+  "name": "SLIF",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "53": {
+  "name": "CARAMOOR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "54": {
+  "name": "KHARST",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "55": {
+  "name": "EUKORIA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "56": {
+  "name": "MYRIUM",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1060226844
+ },
+ "57": {
+  "name": "KERTH SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1060226844
+ },
+ "58": {
+  "name": "PARSH",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1060226844
+ },
+ "59": {
+  "name": "REAF",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "60": {
+  "name": "IRULTA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "61": {
+  "name": "EMORATH",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "62": {
+  "name": "ILDUNA PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "63": {
+  "name": "MAW",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "64": {
+  "name": "MERIDIA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 0
+ },
+ "65": {
+  "name": "BOREA",
+  "faction": 1,
+  "available": 0,
+  "state": 16,
+  "timer": 1082479957
+ },
+ "66": {
+  "name": "CURIA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "67": {
+  "name": "TARSH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "68": {
+  "name": "SHELT",
+  "faction": 1,
+  "available": 0,
+  "state": 3,
+  "timer": 1068615452
+ },
+ "69": {
+  "name": "IMBER",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1088305380
+ },
+ "70": {
+  "name": "BLISTICA",
+  "faction": 3,
+  "available": 1,
+  "state": 0,
+  "timer": 1088305380
+ },
+ "71": {
+  "name": "RATCH",
+  "faction": 1,
+  "available": 0,
+  "state": 78,
+  "timer": 1082479957
+ },
+ "72": {
+  "name": "JULHEIM",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "73": {
+  "name": "VALGAARD",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "74": {
+  "name": "ARKTURUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "75": {
+  "name": "ESKER",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "76": {
+  "name": "TERREK",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1077004060
+ },
+ "77": {
+  "name": "CIRRUS",
+  "faction": 1,
+  "available": 0,
+  "state": 82,
+  "timer": 1077004060
+ },
+ "78": {
+  "name": "CRIMSICA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "79": {
+  "name": "HEETH",
+  "faction": 2,
+  "available": 1,
+  "state": 3,
+  "timer": 1085392668
+ },
+ "80": {
+  "name": "VELD",
+  "faction": 1,
+  "available": 0,
+  "state": 1875,
+  "timer": 1077004060
+ },
+ "81": {
+  "name": "ALTA V",
+  "faction": 1,
+  "available": 0,
+  "state": 30,
+  "timer": 1077004060
+ },
+ "82": {
+  "name": "URSICA XI",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "83": {
+  "name": "INARI",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1068615452
+ },
+ "84": {
+  "name": "SKAASH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "85": {
+  "name": "MORADESH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "86": {
+  "name": "RASP",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "87": {
+  "name": "BASHYR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "88": {
+  "name": "REGNUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "89": {
+  "name": "MOG",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "90": {
+  "name": "VALMOX",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "91": {
+  "name": "IRO",
+  "faction": 4,
+  "available": 0,
+  "state": 46,
+  "timer": 1077004060
+ },
+ "92": {
+  "name": "GRAFMERE",
+  "faction": 4,
+  "available": 1,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "93": {
+  "name": "NEW STOCKHOLM",
+  "faction": 4,
+  "available": 1,
+  "state": 149,
+  "timer": 965845684
+ },
+ "94": {
+  "name": "OASIS",
+  "faction": 4,
+  "available": 0,
+  "state": 45,
+  "timer": 0
+ },
+ "95": {
+  "name": "GENESIS PRIME",
+  "faction": 4,
+  "available": 1,
+  "state": 1,
+  "timer": 0
+ },
+ "96": {
+  "name": "OUTPOST 32",
+  "faction": 1,
+  "available": 0,
+  "state": 88,
+  "timer": 1082479957
+ },
+ "97": {
+  "name": "CALYPSO",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "98": {
+  "name": "ELYSIAN MEADOWS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "99": {
+  "name": "KEPLER-361b",
+  "faction": 4,
+  "available": 1,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "100": {
+  "name": "TRANDOR",
+  "faction": 2,
+  "available": 1,
+  "state": 36,
+  "timer": 1085392668
+ },
+ "101": {
+  "name": "EAST IRIDIUM TRADING BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 366,
+  "timer": 1082479957
+ },
+ "102": {
+  "name": "LIBERTY RIDGE",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "103": {
+  "name": "BALDRICK PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "104": {
+  "name": "THE WEIR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "105": {
+  "name": "KUPER",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "106": {
+  "name": "OSLO STATION",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "107": {
+  "name": "PÖPLI IX",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "108": {
+  "name": "GUNVALD",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "109": {
+  "name": "DOLPH",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 965845684
+ },
+ "110": {
+  "name": "BEKVAM III",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1068615452
+ },
+ "111": {
+  "name": "DUMA TYR",
+  "faction": 1,
+  "available": 0,
+  "state": 7,
+  "timer": 1082479957
+ },
+ "112": {
+  "name": "VERNEN WELLS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "113": {
+  "name": "AESIR PASS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1090868565
+ },
+ "114": {
+  "name": "AURORA BAY",
+  "faction": 3,
+  "available": 1,
+  "state": 1,
+  "timer": 1096693988
+ },
+ "115": {
+  "name": "PENTA",
+  "faction": 1,
+  "available": 0,
+  "state": 496,
+  "timer": 1088305380
+ },
+ "116": {
+  "name": "GAELLIVARE",
+  "faction": 1,
+  "available": 0,
+  "state": 16,
+  "timer": 1082479957
+ },
+ "117": {
+  "name": "VOG-SOJOTH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "118": {
+  "name": "KIRRIK",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "119": {
+  "name": "MORTAX PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "120": {
+  "name": "WILFORD STATION",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "121": {
+  "name": "PIONEER II",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "122": {
+  "name": "ERSON SANDS",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "123": {
+  "name": "SOCORRO III",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "124": {
+  "name": "BORE ROCK",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1090868565
+ },
+ "125": {
+  "name": "FENRIR III",
+  "faction": 1,
+  "available": 0,
+  "state": 12,
+  "timer": 1077004060
+ },
+ "126": {
+  "name": "TURING",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1068615452
+ },
+ "127": {
+  "name": "ANGEL'S VENTURE",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1088305380
+ },
+ "128": {
+  "name": "DARIUS II",
+  "faction": 1,
+  "available": 0,
+  "state": 13,
+  "timer": 1068615452
+ },
+ "129": {
+  "name": "ACAMAR IV",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "130": {
+  "name": "ACHERNAR SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 4,
+  "timer": 1082479957
+ },
+ "131": {
+  "name": "ACHIRD III",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1068615452
+ },
+ "132": {
+  "name": "ACRAB XI",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "133": {
+  "name": "ACRUX IX",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "134": {
+  "name": "ACUBENS PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "135": {
+  "name": "ADHARA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "136": {
+  "name": "AFOYAY BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "137": {
+  "name": "AIN-5",
+  "faction": 1,
+  "available": 0,
+  "state": 23,
+  "timer": 1082479957
+ },
+ "138": {
+  "name": "ALAIRT III",
+  "faction": 4,
+  "available": 0,
+  "state": 0,
+  "timer": 965845684
+ },
+ "139": {
+  "name": "ALAMAK VII",
+  "faction": 4,
+  "available": 0,
+  "state": 1,
+  "timer": 965845684
+ },
+ "140": {
+  "name": "ALARAPH",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 965845684
+ },
+ "141": {
+  "name": "ALATHFAR XI",
+  "faction": 1,
+  "available": 0,
+  "state": 441,
+  "timer": 1082479957
+ },
+ "142": {
+  "name": "ANDAR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "143": {
+  "name": "ASPEROTH PRIME",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 965845684
+ },
+ "144": {
+  "name": "BELLATRIX",
+  "faction": 1,
+  "available": 0,
+  "state": 52,
+  "timer": 1068615452
+ },
+ "145": {
+  "name": "BOTEIN",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "146": {
+  "name": "OSUPSAM",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "147": {
+  "name": "BRINK-2",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "148": {
+  "name": "BUNDA SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "149": {
+  "name": "CANOPUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "150": {
+  "name": "CAPH",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "151": {
+  "name": "CASTOR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "152": {
+  "name": "DURGEN",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "153": {
+  "name": "DRAUPNIR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "154": {
+  "name": "MORT",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 965845684
+ },
+ "155": {
+  "name": "INGMAR",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "156": {
+  "name": "CHARBAL-VII",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1090868565
+ },
+ "157": {
+  "name": "CHARON PRIME",
+  "faction": 3,
+  "available": 1,
+  "state": 5,
+  "timer": 1092324921
+ },
+ "158": {
+  "name": "CHOEPESSA IV",
+  "faction": 3,
+  "available": 1,
+  "state": 662,
+  "timer": 1082479957
+ },
+ "159": {
+  "name": "CHOOHE",
+  "faction": 3,
+  "available": 1,
+  "state": 620,
+  "timer": 1088305380
+ },
+ "160": {
+  "name": "CHORT BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 462,
+  "timer": 1095237632
+ },
+ "161": {
+  "name": "CLAORELL",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1068615452
+ },
+ "162": {
+  "name": "CLASA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1093781276
+ },
+ "163": {
+  "name": "DEMIURG",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "164": {
+  "name": "DENEB SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "165": {
+  "name": "ELECTRA BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "166": {
+  "name": "ENULIALE",
+  "faction": 2,
+  "available": 0,
+  "state": 0,
+  "timer": 1099257173
+ },
+ "167": {
+  "name": "EPSILON PHOENCIS VI",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1099257173
+ },
+ "168": {
+  "name": "ERATA PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "169": {
+  "name": "ESTANU",
+  "faction": 1,
+  "available": 0,
+  "state": 3,
+  "timer": 1077004060
+ },
+ "170": {
+  "name": "FORI PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "171": {
+  "name": "GACRUX",
+  "faction": 1,
+  "available": 0,
+  "state": 4,
+  "timer": 1077004060
+ },
+ "172": {
+  "name": "GAR HAREN",
+  "faction": 1,
+  "available": 0,
+  "state": 4,
+  "timer": 1085392668
+ },
+ "173": {
+  "name": "GATRIA",
+  "faction": 1,
+  "available": 0,
+  "state": 5,
+  "timer": 1077004060
+ },
+ "174": {
+  "name": "GEMMA",
+  "faction": 1,
+  "available": 0,
+  "state": 12,
+  "timer": 1082479957
+ },
+ "175": {
+  "name": "GRAND ERRANT",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "176": {
+  "name": "HADAR",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "177": {
+  "name": "HAKA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "178": {
+  "name": "HALDUS",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "179": {
+  "name": "HALIES PORT",
+  "faction": 1,
+  "available": 0,
+  "state": 8,
+  "timer": 1082479957
+ },
+ "180": {
+  "name": "HERTHON SECUNDUS",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 965845684
+ },
+ "181": {
+  "name": "HESOE PRIME",
+  "faction": 4,
+  "available": 1,
+  "state": 7,
+  "timer": 1093781276
+ },
+ "182": {
+  "name": "HEZE BAY",
+  "faction": 4,
+  "available": 1,
+  "state": 16,
+  "timer": 965845684
+ },
+ "183": {
+  "name": "HORT",
+  "faction": 1,
+  "available": 0,
+  "state": 23,
+  "timer": 1082479957
+ },
+ "184": {
+  "name": "HYDROBIUS",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 965845684
+ },
+ "185": {
+  "name": "KARLIA",
+  "faction": 1,
+  "available": 0,
+  "state": 25,
+  "timer": 965845684
+ },
+ "186": {
+  "name": "KEID",
+  "faction": 4,
+  "available": 1,
+  "state": 7,
+  "timer": 1077004060
+ },
+ "187": {
+  "name": "KHANDARK",
+  "faction": 4,
+  "available": 1,
+  "state": 38,
+  "timer": 1077004060
+ },
+ "188": {
+  "name": "KLAKA 5",
+  "faction": 1,
+  "available": 0,
+  "state": 12,
+  "timer": 1082479957
+ },
+ "189": {
+  "name": "KNETH PORT",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "190": {
+  "name": "KRAZ",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "191": {
+  "name": "KUMA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "192": {
+  "name": "LASTOFE",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "193": {
+  "name": "LENG SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "194": {
+  "name": "LESATH",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "195": {
+  "name": "MAIA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "196": {
+  "name": "MALEVELON CREEK",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "197": {
+  "name": "MANTES",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "198": {
+  "name": "MARFARK",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "199": {
+  "name": "MARTALE",
+  "faction": 3,
+  "available": 1,
+  "state": 85,
+  "timer": 1082479957
+ },
+ "200": {
+  "name": "MATAR BAY",
+  "faction": 3,
+  "available": 1,
+  "state": 1522,
+  "timer": 1085392668
+ },
+ "201": {
+  "name": "MEISSA",
+  "faction": 3,
+  "available": 1,
+  "state": 10588,
+  "timer": 1095237632
+ },
+ "202": {
+  "name": "MEKBUDA",
+  "faction": 3,
+  "available": 0,
+  "state": 934,
+  "timer": 1100713529
+ },
+ "203": {
+  "name": "MENKENT",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "204": {
+  "name": "MERAK",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1092324921
+ },
+ "205": {
+  "name": "MERGA IV",
+  "faction": 3,
+  "available": 1,
+  "state": 0,
+  "timer": 1100713529
+ },
+ "206": {
+  "name": "MINCHIR",
+  "faction": 1,
+  "available": 0,
+  "state": 215,
+  "timer": 1082479957
+ },
+ "207": {
+  "name": "MINTORIA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "208": {
+  "name": "MORDIA 9",
+  "faction": 1,
+  "available": 0,
+  "state": 12,
+  "timer": 1082479957
+ },
+ "209": {
+  "name": "NABATEA SECUNDUS",
+  "faction": 2,
+  "available": 0,
+  "state": 0,
+  "timer": 1099257173
+ },
+ "210": {
+  "name": "NAVI VII",
+  "faction": 2,
+  "available": 0,
+  "state": 0,
+  "timer": 1099257173
+ },
+ "211": {
+  "name": "NIVEL 43",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "212": {
+  "name": "OSHAUNE",
+  "faction": 1,
+  "available": 0,
+  "state": 3,
+  "timer": 1096693988
+ },
+ "213": {
+  "name": "OVERGOE PRIME",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "214": {
+  "name": "PANDION-XXIV",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "215": {
+  "name": "PARTION",
+  "faction": 2,
+  "available": 1,
+  "state": 23,
+  "timer": 1082479957
+ },
+ "216": {
+  "name": "PEACOCK",
+  "faction": 2,
+  "available": 0,
+  "state": 508,
+  "timer": 1085392668
+ },
+ "217": {
+  "name": "PHACT BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 3,
+  "timer": 1088305380
+ },
+ "218": {
+  "name": "PHERKAD SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 89,
+  "timer": 1082479957
+ },
+ "219": {
+  "name": "POLARIS PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1082479957
+ },
+ "220": {
+  "name": "POLLUX 31",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "221": {
+  "name": "PRASA",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "222": {
+  "name": "PROPUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "223": {
+  "name": "RAS ALGETHI",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "224": {
+  "name": "RD-4",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "225": {
+  "name": "ROGUE 5",
+  "faction": 4,
+  "available": 1,
+  "state": 25,
+  "timer": 1077004060
+ },
+ "226": {
+  "name": "RIRGA BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 6,
+  "timer": 1088305380
+ },
+ "227": {
+  "name": "SEASSE",
+  "faction": 1,
+  "available": 0,
+  "state": 7,
+  "timer": 1102169884
+ },
+ "228": {
+  "name": "SENGE 23",
+  "faction": 4,
+  "available": 1,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "229": {
+  "name": "SETIA",
+  "faction": 4,
+  "available": 0,
+  "state": 113,
+  "timer": 1077004060
+ },
+ "230": {
+  "name": "SHETE",
+  "faction": 4,
+  "available": 0,
+  "state": 1,
+  "timer": 1077004060
+ },
+ "231": {
+  "name": "SIEMNOT",
+  "faction": 4,
+  "available": 1,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "232": {
+  "name": "SIRIUS",
+  "faction": 1,
+  "available": 0,
+  "state": 137,
+  "timer": 1082479957
+ },
+ "233": {
+  "name": "SKAT BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "234": {
+  "name": "SPHERION",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "235": {
+  "name": "STOR THA PRIME",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "236": {
+  "name": "STOUT",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "237": {
+  "name": "TERMADON",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "238": {
+  "name": "TIBIT",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "239": {
+  "name": "TIEN KWAN",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "240": {
+  "name": "TROOST",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 965845684
+ },
+ "241": {
+  "name": "UBANEA",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "242": {
+  "name": "USTOTU",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "243": {
+  "name": "VANDALON IV",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1077004060
+ },
+ "244": {
+  "name": "VARYLIA 5",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1077004060
+ },
+ "245": {
+  "name": "WASAT",
+  "faction": 1,
+  "available": 0,
+  "state": 8,
+  "timer": 1082479957
+ },
+ "246": {
+  "name": "VEGA BAY",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1082479957
+ },
+ "247": {
+  "name": "WEZEN",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "248": {
+  "name": "VINDEMITARIX PRIME",
+  "faction": 3,
+  "available": 0,
+  "state": 0,
+  "timer": 1100713529
+ },
+ "249": {
+  "name": "X-45",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "250": {
+  "name": "YED PRIOR",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 965845684
+ },
+ "251": {
+  "name": "ZEFIA",
+  "faction": 1,
+  "available": 0,
+  "state": 2,
+  "timer": 1088305380
+ },
+ "252": {
+  "name": "ZOSMA",
+  "faction": 3,
+  "available": 0,
+  "state": 3,
+  "timer": 1077004060
+ },
+ "253": {
+  "name": "ZZANIAH PRIME",
+  "faction": 3,
+  "available": 1,
+  "state": 0,
+  "timer": 1090868565
+ },
+ "254": {
+  "name": "SKITTER",
+  "faction": 1,
+  "available": 0,
+  "state": 422,
+  "timer": 1082479957
+ },
+ "255": {
+  "name": "EUPHORIA III",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "256": {
+  "name": "DIASPORA X",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1099257173
+ },
+ "257": {
+  "name": "GEMSTONE BLUFFS",
+  "faction": 2,
+  "available": 0,
+  "state": 1,
+  "timer": 1099257173
+ },
+ "258": {
+  "name": "ZAGON PRIME",
+  "faction": 2,
+  "available": 0,
+  "state": 0,
+  "timer": 1105082596
+ },
+ "259": {
+  "name": "OMICRON",
+  "faction": 2,
+  "available": 1,
+  "state": 0,
+  "timer": 1105082596
+ },
+ "260": {
+  "name": "CYBERSTAN",
+  "faction": 3,
+  "available": 0,
+  "state": 759,
+  "timer": 1133175694
+ },
+ "261": {
+  "name": "FURY-I",
+  "faction": 3,
+  "available": 1,
+  "state": 12,
+  "timer": 1085392668
+ },
+ "262": {
+  "name": "K-ICXXVI",
+  "faction": 3,
+  "available": 1,
+  "state": 142,
+  "timer": 1088305380
+ },
+ "263": {
+  "name": "?",
+  "faction": 0,
+  "available": 0,
+  "state": 97,
+  "timer": 0
+ },
+ "264": {
+  "name": "KEPLER-303b",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "265": {
+  "name": "KEPLER-305b",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "266": {
+  "name": "MOX SECUNDUS",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1085392668
+ },
+ "267": {
+  "name": "KEPLER-304b",
+  "faction": 2,
+  "available": 0,
+  "state": 0,
+  "timer": 1088305380
+ },
+ "268": {
+  "name": "KEPLER-281b",
+  "faction": 2,
+  "available": 1,
+  "state": 0,
+  "timer": 1088305380
+ },
+ "269": {
+  "name": "KEPLER-342b",
+  "faction": 2,
+  "available": 1,
+  "state": 1309,
+  "timer": 1088305380
+ },
+ "270": {
+  "name": "KEPLER-274b",
+  "faction": 2,
+  "available": 1,
+  "state": 11844,
+  "timer": 1088305380
+ },
+ "271": {
+  "name": "KEPLER-348b",
+  "faction": 1,
+  "available": 0,
+  "state": 1287,
+  "timer": 1088305380
+ },
+ "272": {
+  "name": "KEPLER-334b",
+  "faction": 1,
+  "available": 0,
+  "state": 1,
+  "timer": 1085392668
+ },
+ "273": {
+  "name": "ALDERIDGE COVE",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 1082479957
+ },
+ "274": {
+  "name": "?",
+  "faction": 1,
+  "available": 0,
+  "state": 0,
+  "timer": 0
+ }
+}
